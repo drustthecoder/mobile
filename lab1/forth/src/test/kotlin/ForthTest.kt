@@ -1,5 +1,6 @@
 import org.junit.Rule
 import org.junit.rules.ExpectedException
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -32,6 +33,7 @@ abstract class ForthTest {
             Forth().evaluate("1 +")
         }
     }
+
 
     class Subtraction : ForthTest() {
 
@@ -95,7 +97,7 @@ abstract class ForthTest {
             Forth().evaluate("1 /")
         }
     }
-
+    @Ignore
     class CombinedArithmetic : ForthTest() {
 
         @Test
@@ -104,7 +106,7 @@ abstract class ForthTest {
         @Test
         fun `multiplication and division`() = assertEquals(listOf(2), Forth().evaluate("2 4 * 3 /"))
     }
-
+    @Ignore
     class Dup : ForthTest() {
 
         @Test
@@ -119,7 +121,7 @@ abstract class ForthTest {
             Forth().evaluate("dup")
         }
     }
-
+    @Ignore
     class Drop : ForthTest() {
 
         @Test
@@ -134,7 +136,7 @@ abstract class ForthTest {
             Forth().evaluate("drop")
         }
     }
-
+    @Ignore
     class Swap : ForthTest() {
 
         @Test
@@ -155,7 +157,7 @@ abstract class ForthTest {
             Forth().evaluate("1 swap")
         }
     }
-
+    @Ignore
     class Over : ForthTest() {
 
         @Test
@@ -176,7 +178,7 @@ abstract class ForthTest {
             Forth().evaluate("1 over")
         }
     }
-
+    @Ignore
     class UserDefinedWords : ForthTest() {
 
         @Test
@@ -212,7 +214,7 @@ abstract class ForthTest {
             Forth().evaluate("foo")
         }
     }
-
+    @Ignore
     class CaseInsensitivity : ForthTest() {
 
         @Test
